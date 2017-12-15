@@ -12,7 +12,7 @@ class MarkCommentAsAnswerTest extends TestCase
         $post = $this->createPost();
 
         $comment = factory(Comment::class)->create([
-            'ost_id' => $post->id
+            'post_id' => $post->id
         ]);
 
         $comment->markAsAnswer();
