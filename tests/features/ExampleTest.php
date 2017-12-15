@@ -8,8 +8,9 @@ class ExampleTest extends FeatureTestCase
             'name' => 'Eduardo Ortega',
             'email' => 'ortegon000@hotmail.com'
         ]);
+
         $this->actingAs($user, 'api');
-        $this->visit('api/user')
+        $this->visit('/api/user')
              ->see('Eduardo Ortega')
              ->see('ortegon000@hotmail.com');
     }

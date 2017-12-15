@@ -21,3 +21,7 @@ Route::post('comments/{comment}/accept', [
     'uses' => 'CommentController@accept',
     'as' => 'comments.accept'
 ]);
+
+Route::get('user', function () {
+    return auth()->user()->name." " . auth()->user()->email ;
+});

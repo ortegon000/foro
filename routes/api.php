@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,6 +11,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user()->name." " . $request->user()->email ;
+Route::get('/user', function () {
+    return auth()->user()->name." " . auth()->user()->email ;
 })->middleware('auth:api');
