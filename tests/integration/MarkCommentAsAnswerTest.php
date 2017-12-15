@@ -15,6 +15,7 @@ class MarkCommentAsAnswerTest extends TestCase
             'post_id' => $post->id
         ]);
 
+        
         $comment->markAsAnswer();
 
         $this->assertTrue($comment->fresh()->answer);
