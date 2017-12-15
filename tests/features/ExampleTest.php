@@ -14,4 +14,5 @@ class ExampleTest extends FeatureTestCase
              ->see('Eduardo Ortega')
              ->see('ortegon000@hotmail.com');
     }
+    
 }
